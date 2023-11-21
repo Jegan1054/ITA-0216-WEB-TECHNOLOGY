@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Online Beauty Parlour Appointment Booking System</title>
+</head>
+<style>
+    body {
+        background-image: linear-gradient(45deg,#328f8a,#08ac4b);
+    }
+</style>
+<body>
+    <div class="container">
+        <h1>Welcome to Online Beauty Parlour Appointment Booking System</h1>
+        <h2>Available Services</h2>
+        <div class="service-container">
+            <div class="service-box">
+                <h3>Haircut</h3>
+                <p>$50</p>
+                <button onclick="addToCart('Haircut')">Book Appointment</button>
+            </div>
+            <div class="service-box">
+                <h3>Manicure</h3>
+                <p>$35</p>
+                <button onclick="addToCart('Manicure')">Book Appointment</button>
+            </div>
+            <div class="service-box">
+                <h3>Pedicure</h3>
+                <p>$40</p>
+                <button onclick="addToCart('Pedicure')">Book Appointment</button>
+            </div>
+        </div>
+        <h2>Your Booking Summary</h2>
+        <div class="cart-container">
+            <!-- Services will be added here when the user clicks 'Book Appointment' -->
+        </div>
+        <h2>Payment Summary</h2>
+        <div class="summary-container">
+            <!-- Total amount and checkout button will be displayed here -->
+        </div>
+    </div>
+    <script>
+        // Sample data for services
+const services = [
+    { name: 'Haircut', price: 50 },
+    { name: 'Manicure', price: 35 },
+    { name: 'Pedicure', price: 40 },
+];
+
+// Cart to store selected services
+const cart = [];
+
+// Function to add a service to the cart
+function addToCart(serviceName) {
+    const selectedService = services.find(service => service.name === serviceName);
+
+    if (selectedService) {
+        cart.push(selectedService);
+        updateCart();
+    }
+}
+
+// Function to update the cart displayed on the page
+function updateCart() {
+    const cartContainer = document.querySelector('.cart-container');
+    cartContainer.innerHTML = '';
+
+    cart.forEach(service => {
+        const cartItem = document.createElement('div');
+        cartItem.className = 'cart-item';
+        cartItem.innerHTML = `<p>${service.name} - $${service.price}</p>`;
+        cartContainer.appendChild(cartItem);
+    });
+
+    updateSummary();
+}
+
+// Function to update the payment summary displayed on the page
+function updateSummary() {
+    const summaryContainer = document.querySelector('.summary-container');
+    summaryContainer.innerHTML = '';
+
+    const totalAmount = cart.reduce((total, service) => total + service.price, 0);
+
+    const totalElement = document.createElement('p');
+    totalElement.innerHTML = `<strong>Total: $${totalAmount}</strong>`;
+    summaryContainer.appendChild(totalElement);
+
+    const checkoutButton = document.createElement('button');
+    checkoutButton.textContent = 'Checkout';
+    checkoutButton.addEventListener('click', checkout);
+    summaryContainer.appendChild(checkoutButton);
+}
+
+// Function to simulate checkout (in a real scenario, this would involve payment processing)
+function checkout() {
+    alert('Thank you for booking! Payment successful.');
+    // Reset the cart after checkout
+    cart.length = 0;
+    updateCart();
+}
+
+// Initial update of the cart and summary
+updateCart();
+
+    </script>
+</body>
+</html>

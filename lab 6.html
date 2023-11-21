@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Online Cake Ordering System</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to Online Cake Ordering System</h1>
+        <h2>Cakes Available</h2>
+        <div class="cake-container">
+            <div class="cake-box">
+                <img src="cake1.jpg" alt="Chocolate Layer Cake">
+                <h3>Chocolate Layer Cake</h3>
+                <p>$50</p>
+                <button>Add to Cart</button>
+            </div>
+            <div class="cake-box">
+                <img src="cake2.jpg" alt="Strawberry Cake">
+                <h3>Strawberry Cake</h3>
+                <p>$55</p>
+                <button>Add to Cart</button>
+            </div>
+            <div class="cake-box">
+                <img src="cake3.jpg" alt="Vanilla Layer Cake">
+                <h3>Vanilla Layer Cake</h3>
+                <p>$60</p>
+                <button>Add to Cart</button>
+            </div>
+        </div>
+        <h2>Your Cart</h2>
+        <div class="cart-container">
+            <!-- Cakes will be added here when the user clicks 'Add to Cart' -->
+        </div>
+        <h2>Order Summary</h2>
+        <div class="summary-container">
+            <!-- Total amount and checkout button will be displayed here -->
+        </div>
+    </div>
+    <style>
+        body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f7f7f7;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1, h2, h3 {
+    color: #333;
+}
+
+.cake-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.cake-box {
+    width: 30%;
+    background-color: #fff;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+}
+.cake-box:hover {
+    transform: scale(1.05);
+}
+.cake-box img {
+    width: 100%;
+    height: auto;
+    border-bottom: 1px solid #ddd;
+}
+.cake-box h3 {
+    padding: 10px;
+    margin: 0;
+}
+.cake-box p {
+    padding: 0 10px 10px;
+    margin: 0;
+    color: #777;
+}
+button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.cart-container {
+    margin-top: 20px;
+}
+.summary-container {
+    margin-top: 20px;
+}
+</style>
+</body>
+</html>

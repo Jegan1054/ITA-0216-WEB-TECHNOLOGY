@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Online Bus Ticket Booking</title>
+</head>
+<body>
+    <div class="body">
+        <div class="header">
+            <h1>Online Bus Ticket Booking</h1>
+        </div>
+
+        <div class="content">
+            <h2>Search for available buses</h2>
+            <form>
+                <label for="startpoint">Start Point:</label>
+                <input type="text" id="startpoint" name="startpoint">
+
+                <label for="endpoint">End Point:</label>
+                <input type="text" id="endpoint" name="endpoint">
+
+                <label for="date">Journey Date:</label>
+                <input type="date" id="date" name="date">
+
+                <input type="submit" value="Search">
+            </form>
+
+            <h2>Available Buses</h2>
+            <div class="buses">
+                <div class="bus-item">
+                    <h3>Bus A</h3>
+                    <p>Seats available: 20</p>
+                    <button>Select Bus</button>
+                </div>
+                <div class="bus-item">
+                    <h3>Bus B</h3>
+                    <p>Seats available: 15</p>
+                    <button>Select Bus</button>
+                </div>
+            </div>
+
+            <h2>Book a Bus</h2>
+            <form>
+                <label for="bus">Bus:</label>
+                <select id="bus" name="bus">
+                </select>
+                <label for="seats">Number of Seats:</label>
+                <input type="number" id="seats" name="seats" min="1">
+
+                <input type="submit" value="Book">
+            </form>
+        </div>
+
+        <div class="footer">
+            <p>&copy; 2022 Online Bus Ticket Booking</p>
+        </div>
+    </div>
+    <style>
+        body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.body {
+    background-color: #ce9df4;
+}
+
+.header {
+    text-align: center;
+    background-color: #8a23da;
+    color: #fff;
+    padding: 20px;
+}
+
+.content {
+    text-align: left;
+    background-color: #ce9df4;
+    padding: 20px;
+}
+
+.footer {
+    background-color: #8a23da;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+}
+
+form {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+input, select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+}
+
+input[type="submit"] {
+    background-color: #8a23da;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #6a1b9a;
+}
+
+.buses {
+    display: flex;
+    flex-wrap: wrap;
+}
+.bus-item {
+    width: 30%;
+    background-color: #fff;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+.bus-item h3 {
+    margin-bottom: 5px;
+}
+</style>
+</body>
+</html>

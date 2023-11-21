@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Material User</title>
+</head>
+<body>
+    <div class="view-material-user-container">
+        <h2>User Information</h2>
+        <div class="user-details">
+            <label for="userIdInput">User ID:</label>
+            <input type="text" id="userIdInput" placeholder="Enter User ID">
+            <button onclick="updateUserInfo()">Update User Info</button>
+
+            <p><strong>User ID:</strong> <span id="userId">123</span></p>
+            <p><strong>Name:</strong> <span id="userName">John Doe</span></p>
+            <p><strong>Email:</strong> <span id="userEmail">john@example.com</span></p>
+        </div>
+
+        <h2>Material Information</h2>
+        <div class="material-details">
+            <label for="materialIdInput">Material ID:</label>
+            <input type="text" id="materialIdInput" placeholder="Enter Material ID">
+            <button onclick="updateMaterialInfo()">Update Material Info</button>
+
+            <p><strong>Material ID:</strong> <span id="materialId">456</span></p>
+            <p><strong>Material Name:</strong> <span id="materialName">Sample Material</span></p>
+            <p><strong>Year:</strong> <span id="materialYear">2023</span></p>
+            <p><strong>Semester:</strong> <span id="materialSemester">Spring</span></p>
+        </div>
+    </div>
+
+    <script>
+        function updateUserInfo() {
+            const userIdInput = document.getElementById('userIdInput');
+            const userName = document.getElementById('userName');
+            const userEmail = document.getElementById('userEmail');
+
+            userId.innerText = userIdInput.value;
+            userName.innerText = 'jegan'; 
+            userEmail.innerText = 'jegan@gmail.com'; 
+        }
+
+        function updateMaterialInfo() {
+            const materialIdInput = document.getElementById('materialIdInput');
+            const materialName = document.getElementById('materialName');
+            const materialYear = document.getElementById('materialYear');
+            const materialSemester = document.getElementById('materialSemester');
+
+            materialId.innerText = materialIdInput.value;
+            materialName.innerText = 'New Material'; 
+            materialYear.innerText = '2024'; 
+            materialSemester.innerText = 'Fall'; 
+        }
+    </script>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .view-material-user-container {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            text-align: left;
+        }
+
+        .user-details, .material-details {
+            margin-bottom: 20px;
+        }
+
+        .material-details p {
+            margin-bottom: 10px;
+        }
+
+        strong {
+            margin-right: 10px;
+        }
+    </style>
+</body>
+</html>

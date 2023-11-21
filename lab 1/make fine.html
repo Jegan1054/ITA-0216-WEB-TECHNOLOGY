@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Make Fine</title>
+</head>
+<body>
+    <div class="make-fine-container">
+        <form action="issue book for student.html" method="post">
+            <h2>Make Fine</h2>
+            <label for="studentId">Student ID:</label>
+            <input type="text" id="studentId" name="studentId" required>
+            <label for="fineAmount">Fine Amount:</label>
+            <input type="text" id="fineAmount" name="fineAmount" required>
+            <button type="submit">Submit Fine</button>
+        </form>
+    </div><style>
+        body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.make-fine-container {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-top: 10px;
+}
+
+input {
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    background-color: #4caf50;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+    </style>
+</body>
+</html>
