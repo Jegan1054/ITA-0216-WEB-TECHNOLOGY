@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Electronic Gadgets Store</title>
+</head>
+<body>
+    <header>
+        <h1>Electronic Gadgets Store</h1>
+        <nav>
+            <ul>
+                <li><a href="#" onclick="showHome()">Home</a></li>
+                <li><a href="#" onclick="showProducts()">Products</a></li>
+                <li><a href="#" onclick="showCart()">Cart</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="home">
+        <section id="categories">
+            <h2>Categories</h2>
+            <ul id="categoryList"></ul>
+        </section>
+
+        <section id="subcategories">
+            <h2>Subcategories</h2>
+            <ul id="subcategoryList"></ul>
+        </section>
+    </main>
+
+    <main id="products" style="display: none;">
+        <!-- Product sections will be dynamically added here -->
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Electronic Gadgets Store</p>
+    </footer>
+    <style>
+        /* Add your CSS styles here */
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}
+
+nav,ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav,ul,li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav,a {
+    text-decoration: none;
+    color: #fff;
+    cursor: pointer;
+}
+
+main {
+    max-width: 800px;
+    margin: 20px auto;
+}
+
+#categories, #subcategories {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+#categoryList, #subcategoryList {
+    list-style: none;
+    padding: 0;
+}
+
+#categoryList li, #subcategoryList li {
+    margin-bottom: 10px;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+    </style>
+
+    <script>
+        // Add your JavaScript code here
+
+function showHome() {
+    document.getElementById("home").style.display = "block";
+    document.getElementById("products").style.display = "none";
+}
+
+function showProducts() {
+    document.getElementById("home").style.display = "none";
+    document.getElementById("products").style.display = "block";
+    // Add logic to dynamically load products here
+}
+
+function showCart() {
+    // Add logic to show the shopping cart
+    alert("Cart functionality not implemented in this example.");
+}
+ </script>
+</body>
+</html>
