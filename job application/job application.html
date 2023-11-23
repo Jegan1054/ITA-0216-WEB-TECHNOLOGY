@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Application Website</title>
+</head>
+<body>
+    <header>
+        <h1>Job Application Website</h1>
+    </header>
+
+    <main>
+        <section class="admin">
+            <h2>Admin</h2>
+            <form>
+                <label for="admin-email">Email:</label>
+                <input type="email" id="admin-email" required>
+                <br>
+                <label for="admin-password">Password:</label>
+                <input type="password" id="admin-password" required>
+                <br>
+                <center><button type="submit">Login</button></center>
+            </form>
+        </section>
+
+        <section class="director">
+            <h2>Director</h2>
+            <form>
+                <label for="director-email">Email:</label>
+                <input type="email" id="director-email" required>
+                <br>
+                <label for="director-password">Password:</label>
+                <input type="password" id="director-password" required>
+                <br>
+                <center><button type="submit">Login</button></center>
+            </form>
+        </section>
+
+        <section class="user">
+            <h2>User</h2>
+            <form>
+                <label for="user-name">Name:</label>
+                <input type="text" id="user-name" required>
+                <br>
+                <label for="user-email">Email:</label>
+                <input type="email" id="user-email" required>
+                <br>
+                <label for="user-password">Password:</label>
+                <input type="password" id="user-password" required>
+                <br>
+                <center><button type="submit">Register</button></center>
+            </form>
+            <form>
+                <label for="user-login-email">Email:</label>
+                <input type="email" id="user-login-email" required>
+                <br>
+                <label for="user-login-password">Password:</label>
+                <input type="password" id="user-login-password" required>
+                <br>
+                <center><button type="submit">Login</button></center>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <center><p>&copy; 2022 Job Application Website. All rights reserved.</p></center>
+    </footer>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+header h1 {
+    margin: 0;
+}
+
+section {
+    margin: 20px 0;
+}
+
+h2 {
+    margin-bottom: 10px;
+}
+
+form {
+    margin-bottom: 20px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0 10px;
+    border: 1px solid #ddd;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+}
+
+button:hover {
+    background-color: #45a049
+    </style>
+</body>
+</html>
